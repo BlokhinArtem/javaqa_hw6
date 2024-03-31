@@ -7,25 +7,25 @@ public class TestCalcService {
     @Test
     public void shouldFindSumm() {
         CalcService service = new CalcService();
-        int[] summ = {8, 15, 13};
+        long[] summ = {8, 15, 13};
         int expected = 36;
-        int actual = service.getSumm(summ);
+        long actual = service.getSumm(summ);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldFindMidSumm() {
         CalcService service = new CalcService();
-        int[] midSumm = {8, 15, 13};
-        int expected = 12;
-        int actual = service.getMidSumm(midSumm);
+        long[] midSumm = {40, 60, 20};
+        long expected = 10;
+        long actual = service.getMidSumm(midSumm);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldFindMinSaleMonth() {
         CalcService service = new CalcService();
-        int[] minSale = {8, 15, 13, 8};
+        long[] minSale = {8, 15, 13, 8};
         int expected = 4;
         int actual = service.getMinSaleMonth(minSale) + 1;
         Assertions.assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class TestCalcService {
     @Test
     public void shouldFindMaxSaleMonth() {
         CalcService service = new CalcService();
-        int[] maxSale = {8, 15, 13, 15};
+        long[] maxSale = {8, 15, 13, 15};
         int expected = 4;
         int actual = service.getMaxSaleMonth(maxSale) + 1;
         Assertions.assertEquals(expected, actual);
@@ -43,7 +43,7 @@ public class TestCalcService {
     @Test
     public void getCountMonthLessThanMidSumm() {
         CalcService service = new CalcService();
-        int[] countLess = {10, 20, 10, 20};
+        long[] countLess = {140, 20, 10, 10, 60};
         int expected = 2;
         int actual = service.getСountSalesLessThanMidSumm(countLess);
         Assertions.assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class TestCalcService {
     @Test
     public void getCountMoreThanMidSumm() {
         CalcService service = new CalcService();
-        int[] countMore = {10, 20, 10, 20};
+        long[] countMore = {140, 20, 10, 10, 60};
         int expected = 2;
         int actual = service.getСountSalesMoreThanMidSumm(countMore);
         Assertions.assertEquals(expected, actual);

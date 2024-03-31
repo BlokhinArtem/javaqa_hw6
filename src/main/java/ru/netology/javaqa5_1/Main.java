@@ -2,12 +2,12 @@ package ru.netology.javaqa5_1;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {
+        long[] arr = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         CalcService service = new CalcService();
-        int summ = service.getSumm(arr);
-        int midSumm = service.getMidSumm(arr);
+        long summ = service.getSumm(arr);
+        long midSumm = service.getMidSumm(arr);
         int minSaleMonth = service.getMinSaleMonth(arr) + 1;
         int maxSaleMonth = service.getMaxSaleMonth(arr) + 1;
         int saleLessThanMidSumm = service.getСountSalesLessThanMidSumm(arr);
