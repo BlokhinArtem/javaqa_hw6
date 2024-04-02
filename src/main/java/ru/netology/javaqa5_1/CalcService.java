@@ -20,20 +20,20 @@ public class CalcService {
         int minSaleMonth = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] <= arr[minSaleMonth]) {
-                minSaleMonth = i + 1; // +1 т.к. подсчёт ячеек в массиве идёт с 0, а хочу вести подсчёт месяцев с 1
+                minSaleMonth = i; // +1 т.к. подсчёт ячеек в массиве идёт с 0, а хочу вести подсчёт месяцев с 1
             }
         }
-        return minSaleMonth;
+        return minSaleMonth + 1;
     }
 
     public int getMaxSaleMonth(long[] arr) {
         int maxSaleMonth = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] >= arr[maxSaleMonth]) {
-                maxSaleMonth = i + 1; // +1 аналогично, из-за нумерации ячеек массивов.
+                maxSaleMonth = i; // +1 аналогично, из-за нумерации ячеек массивов.
             }
         }
-        return maxSaleMonth;
+        return maxSaleMonth + 1;
     }
 
     public int getСountSalesLessThanMidSumm(long[] arr) {

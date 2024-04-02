@@ -27,7 +27,7 @@ public class TestCalcService {
         CalcService service = new CalcService();
         long[] minSale = {8, 15, 13, 8};
         int expected = 4;
-        int actual = service.getMinSaleMonth(minSale) + 1;
+        int actual = service.getMinSaleMonth(minSale);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -36,7 +36,7 @@ public class TestCalcService {
         CalcService service = new CalcService();
         long[] maxSale = {8, 15, 13, 15};
         int expected = 4;
-        int actual = service.getMaxSaleMonth(maxSale) + 1;
+        int actual = service.getMaxSaleMonth(maxSale) ;
         Assertions.assertEquals(expected, actual);
     }
 
